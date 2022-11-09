@@ -1,28 +1,14 @@
 
 import './ExpenseItems.css'
 
-function ExpenseItem() {
+function ExpenseItem(prop) {
     return (
         <div>
             <div className='expense-item'>
-                <div>hyderbad</div>
+                <div>{prop.obj.location}</div>
                 <div className='expense-item__description'>
-                    <h2>food</h2>
-                    <div className='expense-item__pice'>10</div>
-                </div>
-            </div>
-            <div className='expense-item'>
-                <div>kakinada</div>
-                <div className='expense-item__description'>
-                    <h2>petrol</h2>
-                    <div className='expense-item__pice'>100</div>
-                </div>
-            </div>
-            <div className='expense-item'>
-                <div>hyderbad</div>
-                <div className='expense-item__description'>
-                    <h2>movie</h2>
-                    <div className='expense-item__pice'>200</div>
+                    <h2>{ prop.obj.desc}</h2>
+                    <div className='expense-item__pice'>{ prop.obj.price}</div>
                 </div>
             </div>
         </div>
