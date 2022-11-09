@@ -1,4 +1,4 @@
-import ExpenseItem from './componenents/ExpenseItems'
+import Expense from "./Expense";
 
 function App() {
   const data = [
@@ -9,9 +9,8 @@ function App() {
   return (
     <div>
       HELLO THERE hfddhfh
-      <ExpenseItem obj={data[0]}></ExpenseItem>
-      <ExpenseItem obj={data[1]}></ExpenseItem>
-      <ExpenseItem obj={data[2]}></ExpenseItem>
+      <Expense data={data}></Expense>
+  
     </div>
   );
 }
