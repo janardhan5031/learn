@@ -1,18 +1,29 @@
 
+import './ExpenseItems.css'
+
 function ExpenseItem() {
     return (
         <div>
-            <div>
-                <h2>food</h2>
-                <h4>RS 10</h4>
+            <div className='expense-item'>
+                <div>hyderbad</div>
+                <div className='expense-item__description'>
+                    <h2>food</h2>
+                    <div className='expense-item__pice'>10</div>
+                </div>
             </div>
-            <div>
-                <h2>petrol</h2>
-                <h4>RS 100</h4>
+            <div className='expense-item'>
+                <div>kakinada</div>
+                <div className='expense-item__description'>
+                    <h2>petrol</h2>
+                    <div className='expense-item__pice'>100</div>
+                </div>
             </div>
-            <div>
-                <h2>movie</h2>
-                <h4>RS 200</h4>
+            <div className='expense-item'>
+                <div>hyderbad</div>
+                <div className='expense-item__description'>
+                    <h2>movie</h2>
+                    <div className='expense-item__pice'>200</div>
+                </div>
             </div>
         </div>
     )
