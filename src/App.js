@@ -2,9 +2,9 @@ import ExpenseItem from './componenents/ExpenseItems'
 
 function App() {
   const data = [
-    { location: 'hyd', price: 10, desc: 'food' },
-    { location: 'hyd', price: 100, desc: 'petrol' },
-    { location: 'hyd', price: 200, desc: 'movie' }
+    { date: new Date(2022,1,10), price: 10, desc: 'food' },
+    { date: new Date(2022,2,11), price: 100, desc: 'petrol' },
+    { date: new Date(2022,5,20), price: 200, desc: 'movie' }
   ]
   return (
     <div>
