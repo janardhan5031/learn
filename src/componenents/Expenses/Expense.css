@@ -1,3 +1,10 @@
+.inner_div{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1rem;
+  margin: 0;
+}
 .expenses {
     padding: 1rem;
     background-color: rgb(31, 31, 31);
@@ -6,4 +13,5 @@
     max-width: 95%;
     border-radius: 12px;
     box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
-  }
+    
+}

@@ -1,13 +1,30 @@
+import React ,{ useState } from 'react';
+
 import ExpenseItem from './ExpenseItems';
 
 import './Expense.css';
 
 function Expense(prop) {
+
+    const [expenseList,setFun] = useState(prop.data)
+
+    function deleteHandler(idx) {
+        setFun( expenseList.filter((vl,index)=> index!==idx) )
+        
+    }
+
     return (
         <div className='expenses'>
-            <ExpenseItem obj={prop.data[0]}></ExpenseItem>
-            <ExpenseItem obj={prop.data[1]}></ExpenseItem>
-            <ExpenseItem obj={prop.data[2]}></ExpenseItem>
+            {
+                expenseList.map((ele, idx) => (
+                    <div className='inner_div' key={idx}>
+                        <ExpenseItem obj={ele} >
+                        </ExpenseItem>
+                        <button onClick={() => deleteHandler(idx)} >delete</button>
+                    </div>
+                ))
+            }
+        
         </div>
 
     )

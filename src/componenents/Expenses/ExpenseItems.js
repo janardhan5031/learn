@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+
 
 import ExpenseDate from './ExpenseDate';
 import Card from '../UI/card';
@@ -11,22 +11,14 @@ function ExpenseItem(prop) {
 
     const { date, desc, price } = prop.obj;
 
-    const [visibility,setvisibility] = useState('expense-item');
-
-    const deleteHandler = () => {
-        setvisibility('visibility');
-
-        
-    }
-
     return (
-        <Card className= {visibility}>
+        <Card className= 'expense-item'>
             <ExpenseDate date={date}/>
             <div className='expense-item__description'>
                 <h2>{ desc}</h2>
                 <div className='expense-item__price'>{ price}</div>
             </div>
-            <button onClick={deleteHandler}>Delete</button>
+        
         </Card>
     )
 }
