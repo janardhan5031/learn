@@ -9,20 +9,22 @@ function ExpenseItem(prop) {
     // useState function is only works in component function and it take value as argument and return arry of items
     // [value(to be changed),function(to change the value)]
 
-    const [title,setTitle] = useState(prop.obj.desc)
+    const { date, desc, price } = prop.obj;
+
+    const [visibility,setvisibility] = useState('expense-item');
 
     const deleteHandler = () => {
-        setTitle('jani');
-        
+        setvisibility('visibility');
+
         
     }
 
     return (
-        <Card className='expense-item'>
-            <ExpenseDate date={ prop.obj.date}/>
+        <Card className= {visibility}>
+            <ExpenseDate date={date}/>
             <div className='expense-item__description'>
-                <h2>{ title}</h2>
-                <div className='expense-item__price'>{ prop.obj.price}</div>
+                <h2>{ desc}</h2>
+                <div className='expense-item__price'>{ price}</div>
             </div>
             <button onClick={deleteHandler}>Delete</button>
         </Card>
