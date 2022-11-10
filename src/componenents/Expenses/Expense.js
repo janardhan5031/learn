@@ -1,4 +1,4 @@
-import ExpenseItem from './componenents/ExpenseItems';
+import ExpenseItem from './ExpenseItems';
 
 import './Expense.css';
 
