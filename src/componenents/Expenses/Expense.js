@@ -6,10 +6,11 @@ import './Expense.css';
 
 function Expense(prop) {
 
-    const [expenseList,setFun] = useState(prop.data)
+    let [expenseList,setFun] = useState(prop.data)
 
     function deleteHandler(idx) {
-        setFun( expenseList.filter((vl,index)=> index!==idx) )
+        setFun(expenseList.filter((vl, index) => index !== idx))
+        console.log(expenseList)
         
     }
 
