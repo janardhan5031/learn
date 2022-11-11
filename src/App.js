@@ -7,11 +7,18 @@ function App() {
     { date: new Date(2022,1,10), price: 10, desc: 'food' },
     { date: new Date(2022,2,11), price: 100, desc: 'petrol' },
     { date: new Date(2022,5,20), price: 200, desc: 'movie' }
-  ]
+  ];
+
+  function newExpense(Expense) {
+    console.log( 'from app ' ,Expense)
+  }
+
+
+
   return (
     <div>
       HELLO THERE hfddhfh
-      <NewExpense />
+      <NewExpense onNewExpense={ newExpense} />
       <Expense data={data}></Expense>
   
     </div>

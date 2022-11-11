@@ -3,11 +3,20 @@ import ExpenseForm from './ExpenseForm'
 
 import './newExpense.css'
 
-function newExpense() {
+function newExpense(prop) {
+
+    const saveExpense = (Expense) => {
+        const newExpense = { ...Expense, id: Math.random().toString() }
+        
+        // console.log(newExpense)
+
+        //calling the function in parent component through pro object to Execute it from here
+        prop.onNewExpense(newExpense)
+    }
      
     return (
         <div className="new-expense">
-            <ExpenseForm/>
+            <ExpenseForm onSaveExpense={saveExpense} />
         </div>
     )
 }

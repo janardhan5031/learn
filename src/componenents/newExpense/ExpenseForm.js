@@ -2,7 +2,7 @@
 import { useState } from 'react'
 import './expenseForm.css'
 
-function ExpenseForm() {
+function ExpenseForm( prop) {
 
     const [titleEntered,titleSet] = useState('')
     const [amountEntered,amountSet] = useState('')
@@ -29,7 +29,8 @@ function ExpenseForm() {
             date :new Date( dateEntered)
         }
 
-        console.log(expenseData)
+        // console.log(expenseData)
+        prop.onSaveExpense(expenseData)
 
         // set the default empty values
         titleSet('');
