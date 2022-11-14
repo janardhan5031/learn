@@ -12,7 +12,7 @@ const data = [
 
 function App() {
   
-  const [updated_data,setUpdated_data] = useState(data)
+  const [updated_data, setUpdated_data] = useState(data)
   
   console.log(updated_data)
   function newExpense(Expense) {

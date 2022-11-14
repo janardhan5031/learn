@@ -7,23 +7,21 @@ import './Expense.css';
 
 function Expense(prop) {
 
-    // let [expenseList,setFun] = useState(prop.data)
+    let [filteredYear,setYear] = useState('2022')
 
-    // function deleteHandler(idx) {
-    //     setFun(expenseList.filter((vl, index) => index !== idx))
-        
-    // }
-    console.log(prop.data)
-
-    function filteredYear(year) {
-        console.log('from expense component', year)
+    function filteredYearHandler(year) {
+        setYear(year)
     }
+
+    const filteredExpense =prop.data.filter(obj => {
+        return obj.date.getFullYear() == filteredYear;
+    })
 
     return (
         <div className='expenses'>
-            <ExpenseFilter onFilteredYear={ filteredYear} />
+            <ExpenseFilter onFilteredYear={ filteredYearHandler} />
             {
-                prop.data.map((ele, idx) => (
+                filteredExpense.map((ele, idx) => (
                     <div className='inner_div' key={idx}>
                         <ExpenseItem obj={ele} >
                         </ExpenseItem>
