@@ -5,9 +5,9 @@ import NewExpense from "./componenents/newExpense/newExpense";
 import Expense from "./componenents/Expenses/Expense";
 
 const data = [
-  { date: new Date(2022,1,10), price: 10, desc: 'food' },
-  { date: new Date(2022,2,11), price: 100, desc: 'petrol' },
-  { date: new Date(2022,5,20), price: 200, desc: 'movie' }
+  { date: new Date(2022,1,10), price: 10, desc: 'food' , id: Math.random().toString()},
+  { date: new Date(2022,2,11), price: 100, desc: 'petrol', id: Math.random().toString() },
+  { date: new Date(2022,5,20), price: 200, desc: 'movie', id: Math.random().toString() }
 ];
 
 function App() {

@@ -1,10 +1,10 @@
-.inner_div{
+/* .inner_div{
   display: flex;
   flex-direction: row;
   align-items: center;
   padding: 1rem;
   margin: 0;
-}
+} */
 .expenses {
     padding: 1rem;
     background-color: rgb(31, 31, 31);

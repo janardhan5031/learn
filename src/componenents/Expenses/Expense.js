@@ -19,14 +19,16 @@ function Expense(prop) {
 
     return (
         <div className='expenses'>
-            <ExpenseFilter onFilteredYear={ filteredYearHandler} />
-            {
-                filteredExpense.map((ele, idx) => (
-                    <div className='inner_div' key={idx}>
+            <ExpenseFilter onFilteredYear={filteredYearHandler} />
+            { filteredExpense.length ==0 && <p> There is no Expenses</p>}
+            { filteredExpense.length>0 && filteredExpense.map((ele) => (
+                    <div className='inner_div' key={ele.id}>
                         <ExpenseItem obj={ele} >
                         </ExpenseItem>
                         {/* <button onClick={() => deleteHandler(idx)} >delete</button> */}
+                        { filteredExpense.length==1 && <p>Only single Expense here. Please add more...</p>}
                     </div>
+                    
                 ))
             }
         
