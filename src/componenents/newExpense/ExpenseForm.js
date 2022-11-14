@@ -24,8 +24,8 @@ function ExpenseForm( prop) {
     function submitHandler(e) {
         e.preventDefault();
         const expenseData = {
-            title: titleEntered,
-            amount: amountEntered,
+            desc: titleEntered,
+            price: amountEntered,
             date :new Date( dateEntered)
         }
 

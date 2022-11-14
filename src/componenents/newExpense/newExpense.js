@@ -10,7 +10,7 @@ function newExpense(prop) {
         
         // console.log(newExpense)
 
-        //calling the function in parent component through pro object to Execute it from here
+        //calling the function in parent component through prop object to Execute it from here
         prop.onNewExpense(newExpense)
     }
      
