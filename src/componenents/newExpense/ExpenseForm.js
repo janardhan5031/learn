@@ -37,24 +37,10 @@ function ExpenseForm( prop) {
         amountSet('');
         dateSet('')
     }
-
-    const [addForm, setAddForm] = useState('form_remove')
-    const [add_btn,set_add_btn] = useState('')
-
-    function add_Expense_btn_handler() {
-        setAddForm('')
-        set_add_btn('remove_add_btn')
-    }
-
-    function remove_btn_handler() {
-        setAddForm('form_remove');
-        set_add_btn('')
-    }
     
     return (
         <div>
-            <button onClick={add_Expense_btn_handler} className={add_btn }>Add Expense</button>
-            <form onSubmit={submitHandler} className={ addForm}>
+            <form onSubmit={submitHandler}>
                 <div  className='new-expense__controls'> 
                     <div className='new-expense__control'>
                         <label>Title</label>
@@ -71,7 +57,7 @@ function ExpenseForm( prop) {
 
                 </div>
                 <div className="new-expense__actions">
-                    <button onClick={remove_btn_handler}>cancel</button>
+                    <button onClick={prop.onCancel} >cancel</button>
                     <button type="submit">Add Expense</button>
                 </div>
             </form>

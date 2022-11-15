@@ -1,10 +1,10 @@
-
+import React, { useState } from "react";
 import ExpenseForm from './ExpenseForm'
 
 import './newExpense.css'
 
 function newExpense(prop) {
-
+    const [isEditing, setIsEditing] = useState(false);
     const saveExpense = (Expense) => {
         const newExpense = { ...Expense, id: Math.random().toString() }
         
@@ -13,10 +13,19 @@ function newExpense(prop) {
         //calling the function in parent component through prop object to Execute it from here
         prop.onNewExpense(newExpense)
     }
+
+    
+    const startEditingHandler = () => {
+        setIsEditing(true)
+    }
+    const stopEditingHandler = () => {
+        setIsEditing(false)
+    }
      
     return (
         <div className="new-expense">
-            <ExpenseForm onSaveExpense={saveExpense} />
+            { !isEditing && <button onClick={startEditingHandler}>Add Expenses</button>}
+            {isEditing && <ExpenseForm onSaveExpense={saveExpense} onCancel={ stopEditingHandler} />}
         </div>
     )
 }

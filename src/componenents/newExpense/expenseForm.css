@@ -1,11 +1,3 @@
-.form_remove{
-  display: none;
-}
-
-.remove_add_btn{
-  display: none;
-}
-
 .new-expense__controls {
   display: flex;
   flex-wrap: wrap;
