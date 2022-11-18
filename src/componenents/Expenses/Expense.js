@@ -1,6 +1,7 @@
 import React ,{ useState } from 'react';
 
 import ExpenseFilter from './ExpenseFilter';
+import ExpenseChart from './ExpenseChart';
 import ExpensesList from './ExpensesList';
 
 import './Expense.css';
@@ -14,12 +15,13 @@ function Expense(prop) {
     }
 
     const filteredExpense =prop.data.filter(obj => {
-        return obj.date.getFullYear() == filteredYear;
+        return obj.date.getFullYear().toString() === filteredYear;
     })
 
     return (
         <div className='expenses'>
             <ExpenseFilter onFilteredYear={filteredYearHandler} />
+            <ExpenseChart expenses={ filteredExpense} />
             <ExpensesList items={ filteredExpense} />
         </div>
 

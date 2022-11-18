@@ -3,7 +3,7 @@ import ExpenseForm from './ExpenseForm'
 
 import './newExpense.css'
 
-function newExpense(prop) {
+function NewExpense(prop) {
     const [isEditing, setIsEditing] = useState(false);
     const saveExpense = (Expense) => {
         const newExpense = { ...Expense, id: Math.random().toString() }
@@ -30,4 +30,4 @@ function newExpense(prop) {
     )
 }
 
-export default newExpense;
+export default NewExpense;
